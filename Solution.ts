@@ -4,7 +4,7 @@ function formatString(input: string, toUpper?: boolean): string {
 }
 
 const cheackvalue = formatString("hello",false);
-console.log(cheackvalue);
+
 
 
 
