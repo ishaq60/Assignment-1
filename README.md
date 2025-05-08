@@ -8,7 +8,7 @@ TypeScript enhances JavaScript by adding static typing, helping developers catch
 ````markdown
 
 
----
+
 
 ## 1. The `any` Type: Escape Hatch with Risks
 
@@ -16,9 +16,9 @@ The `any` type is the most flexible in TypeScript—it disables type checking, a
 
 ```typescript
 let dynamicValue: any = "Hello";
-dynamicValue = 42;          //  No error  
-dynamicValue = true;        // No error  
-dynamicValue();             //  No error—but risky at runtime!
+dynamicValue = 42;         
+dynamicValue = true;       
+dynamicValue();             
 ````
 
 **🔍 Why Avoid `any`?**
@@ -41,7 +41,7 @@ let userInput: unknown = "Hello TypeScript";
 // console.log(userInput.toUpperCase());
 
 if (typeof userInput === "string") {
-  console.log(userInput.toUpperCase());  // ✅ Safe after type check
+  console.log(userInput.toUpperCase());  
 }
 ```
 
@@ -80,7 +80,7 @@ function getColorName(color: Color) {
     case "red": return "Red";
     case "blue": return "Blue";
     default:
-      const neverHappens: never = color; // 🚨 Error if Color is extended
+      const neverHappens: never = color; 
   }
 }
 ```
@@ -204,8 +204,8 @@ type LogLevel = (typeof LogLevel)[keyof typeof LogLevel];
 ### Numeric Enums
 
 - **Value Type**: Numbers (e.g., 0, 1, …)
-- **Readability**: ❌ Less readable
-- **Tree-shakable**: ❌ No
+- **Readability**: ❌
+- **Tree-shakable**: 
 - **Use Case**: Status codes, flags
 
 ### String Enums
@@ -218,8 +218,8 @@ type LogLevel = (typeof LogLevel)[keyof typeof LogLevel];
 ### `as const` Object
 
 - **Value Type**: Strings (via object)
-- **Readability**: ✅ Human-readable
-- **Tree-shakable**: ✅ Yes
+- **Readability**: 
+- **Tree-shakable**: 
 - **Use Case**: Lightweight key-value sets
 
 
