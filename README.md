@@ -3,13 +3,13 @@ Here is your content formatted into a `README.md` file **without changing any wo
 ---
 
 ````markdown
-# Understanding `any`, `unknown`, and `never` in TypeScript
+ Understanding `any`, `unknown`, and `never` in TypeScript
 
 TypeScript enhances JavaScript by adding static typing, helping developers catch errors early. Among its powerful features are three special types: any, unknown, and never. Each serves a unique purpose, and understanding their differences is key to writing safer, more maintainable code.
 
 ---
 
-## 1. The `any` Type: Escape Hatch with Risks
+1. The `any` Type: Escape Hatch with Risks
 
 The `any` type is the most flexible in TypeScript—it disables type checking, allowing a variable to hold any value and bypassing compile-time errors.
 
@@ -30,7 +30,7 @@ While `any` offers maximum flexibility, it eliminates TypeScript’s core benefi
 
 ---
 
-## 2. The `unknown` Type: Type-Safe Alternative
+ 2. The `unknown` Type: Type-Safe Alternative
 
 Introduced in TypeScript 3.0, `unknown` is like `any` but enforces type safety. You can assign any value to it, but you must validate its type before use.
 
@@ -54,7 +54,7 @@ if (typeof userInput === "string") {
 
 ---
 
-## 3. The `never` Type: For Impossible Cases
+3. The `never` Type: For Impossible Cases
 
 The `never` type represents values that should never occur. It’s used in two scenarios:
 
