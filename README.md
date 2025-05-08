@@ -16,9 +16,9 @@ The `any` type is the most flexible in TypeScript—it disables type checking, a
 
 ```typescript
 let dynamicValue: any = "Hello";
-dynamicValue = 42;          // ✅ No error  
-dynamicValue = true;        // ✅ No error  
-dynamicValue();             // ✅ No error—but risky at runtime!
+dynamicValue = 42;          //  No error  
+dynamicValue = true;        // No error  
+dynamicValue();             //  No error—but risky at runtime!
 ````
 
 **🔍 Why Avoid `any`?**
@@ -94,12 +94,12 @@ function getColorName(color: Color) {
 
 ## 🔍 Quick Comparison
 
-| Type      | Can Hold Any Value? | Type-Safe? | Common Use Case                           |
-| --------- | ------------------- | ---------- | ----------------------------------------- |
-| `any`     | ✅                   | ❌          | Avoid—bypasses type safety                |
-| `unknown` | ✅                   | ✅          | Flexible input with mandatory type checks |
-| `never`   | ❌                   | ✅          | Impossible cases or unreachable code      |
 
+any: Can hold any value, but is not type-safe. It’s generally recommended to avoid using any because it bypasses TypeScript’s type safety.
+
+unknown: Can hold any value, but is type-safe. You must perform type checks before using the value, making it a safer alternative to any.
+
+never: Cannot hold any value. It is used for impossible situations, such as functions that never return or unreachable code paths.
 ---
 
 ## 🧠 Final Thoughts
@@ -199,12 +199,29 @@ type LogLevel = (typeof LogLevel)[keyof typeof LogLevel];
 
 ## 📊 Quick Comparison
 
-| Feature       | Numeric Enums       | String Enums            | `as const` Object          |
-| ------------- | ------------------- | ----------------------- | -------------------------- |
-| Value Type    | Numbers (0, 1, ...) | Strings ("INFO", ...)   | Strings (via object)       |
-| Readability   | ❌ Less readable     | ✅ Human-readable        | ✅ Human-readable           |
-| Tree-shakable | ❌ No                | ❌ No                    | ✅ Yes                      |
-| Use Case      | Status codes, flags | Log levels, error types | Lightweight key-value sets |
+## Comparison of TypeScript Types
+
+### Numeric Enums
+
+- **Value Type**: Numbers (e.g., 0, 1, …)
+- **Readability**: ❌ Less readable
+- **Tree-shakable**: ❌ No
+- **Use Case**: Status codes, flags
+
+### String Enums
+
+- **Value Type**: Strings (e.g., "INFO", …)
+- **Readability**: ✅ Human-readable
+- **Tree-shakable**: ❌ No
+- **Use Case**: Log levels, error types
+
+### `as const` Object
+
+- **Value Type**: Strings (via object)
+- **Readability**: ✅ Human-readable
+- **Tree-shakable**: ✅ Yes
+- **Use Case**: Lightweight key-value sets
+
 
 ---
 
