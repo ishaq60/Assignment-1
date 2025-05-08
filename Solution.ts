@@ -20,7 +20,7 @@ const books = [
  { title: "Book C", rating: 3.0 },
 ];
 const ratings = filterByRating(books);
-console.log(ratings);
+
 
 
 
@@ -33,7 +33,7 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
 }
 
 const value = concatenateArrays(["a", "b"], ["c"], ["c"]);
-console.log(value);
+
 
 
 
@@ -66,8 +66,7 @@ const myCar = new Car("Toyota", 2020, "Corolla");
 
 const carinfo:string = myCar.getInfO();
 const carinfo2: string = myCar.getModel();
-console.log(carinfo);
-console.log(carinfo2);
+
 
 
 
@@ -81,7 +80,7 @@ function processValue(value: string | number): number {
  }
 }
 const test: string | number = processValue(5);
-console.log(test);
+
 
 
 
@@ -110,7 +109,7 @@ const products = [
 ];
 
 const highestPriceProduct = getMostExpensiveProduct(products);
-console.log(highestPriceProduct);
+
 
 
 
